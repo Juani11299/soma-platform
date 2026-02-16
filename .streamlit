@@ -1,0 +1,7 @@
+config.toml
+[theme]
+primaryColor = "#e63946" # Un rojo deportivo para Ivolution
+backgroundColor = "#ffffff" # Blanco puro
+secondaryBackgroundColor = "#f1faee" # Un gris/verde muy suave para el sidebar
+textColor = "#1d3557" # Azul muy oscuro para el texto
+font = "sans serif"
