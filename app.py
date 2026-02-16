@@ -34,8 +34,37 @@ menu = st.sidebar.selectbox("Ir a:", [
 # --- LÓGICA DE MÓDULOS ---
 
 if menu == "🏠 Inicio":
-    st.title("Bienvenido al Laboratorio SOMA")
-    st.write("Selecciona una sección en el menú lateral para comenzar.")
+    # Título principal
+    st.title("🧬 BIENVENIDOS A SOMA")
+    st.divider()
+
+    # Layout de dos columnas: una para la foto y otra para el texto
+    col1, col2 = st.columns([1, 2])
+
+    with col1:
+        # Aquí cargamos tu foto. Asegúrate de que el nombre coincida.
+        try:
+            st.image("Perfil.JPG", use_container_width=True)
+        except:
+            st.warning("📸 Aquí irá tu foto (sube 'Perfil.JPG' a GitHub)")
+
+    with col2:
+        st.header("Sobre nosotros")
+        st.write("""
+        ¡Hola! Soy **Juan Ignacio Robles**, profesional dedicado a las ciencias del deporte y la biomecánica.
+        
+        SOMA nace como mi espacio personal de manera presencial y ahora, ONLINE. Para integrar el análisis de datos avanzado con 
+        la metodología del entrenamiento. Actualmente, me encuentro profundizando en el uso de 
+        tecnología para la detección de fatiga y la optimización del rendimiento deportivo.
+        
+        En esta plataforma encontrarás:
+        * **Análisis de Datos:** Herramientas para interpretar métricas de rendimiento y controlar la fatiga del deportista.
+        * **Blog:** Artículos sobre entrenamiento y biomecánica aplicada.
+        * **Capacitaciones:** Material para seguir profesionalizando el área.
+        * **Planes:** Programación de entrenamiento personalizada.
+        """)
+        
+        st.info("📍 Mi objetivo es transformar los datos en decisiones prácticas para el campo.")
 
 elif menu == "📊 Análisis de Datos":
     st.header("📊 Análisis de Rendimiento y Fatiga")
